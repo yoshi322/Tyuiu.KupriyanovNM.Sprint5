@@ -36,7 +36,7 @@ namespace Tyuiu.KupriyanovNM.Sprint5.Task0.V10
             Console.WriteLine("Файл: " + res);
             Console.WriteLine("Создан!");
 
-            Console.ReadKey();
+            Console.ReadKey(); //321
         }
     }
 }
