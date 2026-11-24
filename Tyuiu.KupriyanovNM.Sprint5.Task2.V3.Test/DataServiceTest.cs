@@ -9,7 +9,7 @@ namespace Tyuiu.KupriyanovNM.Sprint5.Task2.V3.Test
         [TestMethod]
         public void CheckedExistsFile()
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask2.csv";
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask2.txt");
 
             DataService ds = new DataService();
 
