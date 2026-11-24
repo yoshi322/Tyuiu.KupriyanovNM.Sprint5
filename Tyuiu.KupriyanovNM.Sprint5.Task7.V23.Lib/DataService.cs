@@ -1,4 +1,5 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint5;
+﻿using System.Text.RegularExpressions;
+using tyuiu.cources.programming.interfaces.Sprint5;
 namespace Tyuiu.KupriyanovNM.Sprint5.Task7.V23.Lib
 {
     public class DataService : ISprint5Task7V23
@@ -7,20 +8,15 @@ namespace Tyuiu.KupriyanovNM.Sprint5.Task7.V23.Lib
         {
             string text = File.ReadAllText(path);
 
-            string pathSaveFile = Path.Combine(Path.GetTempPath(), "OutPutFileTask7.txt");
+            string result = Regex.Replace(text, @"[А-Яа-яЁё]+", "");
+            result = Regex.Replace(result, @"\s+", " ");
+            result = Regex.Replace(result, @"\s+([,.!?;:])", "$1");
+            result = result.Trim();
 
-            string[] words = text.Split(
-                new char[] { ' ', '\t', '\r', '\n' },
-                StringSplitOptions.RemoveEmptyEntries);
+            string pathSaveFile = Path.Combine(
+                Path.GetTempPath(), "OutPutFileTask7.txt");
 
-            string result = string.Join(
-                " ",
-                words.Where(word => !word.Any(
-                    symbol => (symbol >= 'А' && symbol <= 'я') ||
-                              symbol == 'Ё' ||
-                              symbol == 'ё')));
-
-            File.WriteAllText(pathSaveFile, result + ".");
+            File.WriteAllText(pathSaveFile, result);
 
             return pathSaveFile;
         }
