@@ -7,7 +7,7 @@ namespace Tyuiu.KupriyanovNM.Sprint5.Task7.V23.Lib
         {
             string text = File.ReadAllText(path);
 
-            string pathSaveFile = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask7V23.txt";
+            string pathSaveFile = Path.Combine(Path.GetTempPath(), "OutPutFileTask7.txt");
 
             string[] words = text.Split(
                 new char[] { ' ', '\t', '\r', '\n' },
