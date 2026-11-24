@@ -7,7 +7,7 @@ namespace Tyuiu.KupriyanovNM.Sprint5.Task3.V27.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask3.bin";
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask3.txt");
 
             DataService ds = new DataService();
             ds.SaveToFileTextData(3);
