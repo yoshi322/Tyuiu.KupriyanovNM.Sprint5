@@ -20,7 +20,7 @@ namespace Tyuiu.KupriyanovNM.Sprint5.Task7.V23.Lib
                               symbol == 'Ё' ||
                               symbol == 'ё')));
 
-            File.WriteAllText(pathSaveFile, result);
+            File.WriteAllText(pathSaveFile, result + ".");
 
             return pathSaveFile;
         }
