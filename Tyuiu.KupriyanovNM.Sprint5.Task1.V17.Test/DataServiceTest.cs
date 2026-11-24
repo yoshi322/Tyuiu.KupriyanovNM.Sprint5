@@ -7,7 +7,7 @@ namespace Tyuiu.KupriyanovNM.Sprint5.Task1.V17.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string path = @"C:\Users\User\source\repos\Tyuiu.KupriyanovNM.Sprint5\Tyuiu.KupriyanovNM.Sprint5.Task1.V17\bin\Debug\net8.0\OutPutFileTask1.txt";
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask1.txt");
 
             DataService ds = new DataService();
             ds.SaveToFileTextData(-5, 5);
