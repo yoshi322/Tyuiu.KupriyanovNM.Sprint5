@@ -16,8 +16,12 @@ namespace Tyuiu.KupriyanovNM.Sprint5.Task5.V6.Lib
                 string tempVal = val.Replace(".", ",");
                 if (double.TryParse(tempVal, out double number))
                 {
-                    sum += number;
-                    count++;
+                    
+                    if (number % 1 != 0)
+                    {
+                        sum += number;
+                        count++;
+                    }
                 }
             }
 
