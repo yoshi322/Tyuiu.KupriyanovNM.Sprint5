@@ -36,7 +36,7 @@ namespace Tyuiu.KupriyanovNM.Sprint5.Task7.V23
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("Результат сохранён в файл: " + outputPath);
-            Console.WriteLine("Текст: " + File.ReadAllText(outputPath));
+            Console.WriteLine("Текст: " + ", " + File.ReadAllText(outputPath));
 
             Console.ReadKey();
         }

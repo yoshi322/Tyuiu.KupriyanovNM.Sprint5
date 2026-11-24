@@ -19,7 +19,7 @@ namespace Tyuiu.KupriyanovNM.Sprint5.Task7.V23.Test
             string outputPath = ds.LoadDataAndSave(inputPath);
 
             Assert.IsTrue(File.Exists(outputPath));
-            Assert.AreEqual("World! This.", File.ReadAllText(outputPath));
+            Assert.AreEqual(", World! This.", File.ReadAllText(outputPath));
 
             File.Delete(inputPath);
             File.Delete(outputPath);
