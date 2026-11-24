@@ -5,7 +5,7 @@ namespace Tyuiu.KupriyanovNM.Sprint5.Task0.V10.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask0.txt";
+            string path = $@"{Directory.GetCurrentDirectory()}/OutPutFileTask0.txt";
 
             double y = 1.6 * Math.Pow(x, 3) - 2.1 * Math.Pow(x, 2) + 7 * x;
             y = Math.Round(y, 3);
